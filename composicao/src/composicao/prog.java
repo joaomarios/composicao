@@ -20,7 +20,7 @@ public class prog {
         System.out.println("ENTRE COM OS DADOS DO TRABALHADOR:");
         System.out.print("NOME:");
         String nomeTrabalhador = scan.nextLine();
-        System.out.print("ENTRE COM O NIVEL DO TRABALHADOR:");
+        System.out.println("ENTRE COM O NIVEL DO TRABALHADOR:");
         System.out.print("<JUNIOR> <MEDIO> <SENIOR>");
         String niveTrabalhdor = scan.nextLine();
         System.out.print("ENTRE COM O SALARIO BASE:");
@@ -43,12 +43,13 @@ public class prog {
         System.out.println();
         System.out.print("ENTRE COM O MES E ANO PARA CALCULAR O SALARIO(MM/YYYY)");
         String mesEano = scan.next();
-        int month = Integer.parseInt(mesEano.substring(0, 2));
-        int year = Integer.parseInt(mesEano.substring(3,7));
+        int mes = Integer.parseInt(mesEano.substring(0, 2));
+        int ano = Integer.parseInt(mesEano.substring(3,7));
         System.out.println("NOME: " + t1.getNome());
+        System.out.println("nivel trabalhador :"+t1.getNivel());
         System.out.println("DEPARTAMENTO: " + t1.getDepartamento().getNome());
         System.out.println(" mes : " + mesEano);       
-        System.out.println("ganhou R$:"+ t1.renda(year, month));
+        System.out.println("ganhou R$:"+ t1.renda(ano, mes));
         scan.close();
     }
 

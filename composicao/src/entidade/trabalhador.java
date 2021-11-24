@@ -68,14 +68,14 @@ public class trabalhador {
         contrato.remove(contract);
     }
 
-    public double renda(int year, int month) {
+    public double renda(int ano, int mes) {
         double soma = salarioBase;
         Calendar cal = Calendar.getInstance();
         for (contratoHora contrato : contrato) {
             cal.setTime(contrato.getDate());
-            int c_year = cal.get(Calendar.YEAR);
-            int c_month = 1 + cal.get(Calendar.MONTH);
-            if (year == c_year && month == c_month) {
+            int c_ano = cal.get(Calendar.YEAR);
+            int c_mes= 1 + cal.get(Calendar.MONTH);
+            if (ano == c_ano && mes == c_mes) {
                 soma += contrato.valorTotal();
             }
 
